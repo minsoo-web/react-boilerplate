@@ -7,7 +7,8 @@
       "@components/*": ["./components/*"],
       "@styles/*": ["./assets/styles/*"],
       "@ico/*": ["./assets/images/ico/*"],
-      "@images/*": ["./assets/images/*"]
+      "@images/*": ["./assets/images/*"],
+      "@utils/*": ["./utils/*"]
     }
   }
 }
