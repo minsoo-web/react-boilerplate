@@ -19,6 +19,8 @@
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
+    "styled-components": "^5.3.3",
+    "styled-reset": "^4.3.4",
     "typescript": "^4.5.5",
     "uuid": "^8.3.2",
     "web-vitals": "^2.1.4"
@@ -36,10 +38,13 @@
       "react-app",
       "react-app/jest"
     ],
+    "rules": {
+      "jsx-a11y/anchor-is-valid": 0
+    },
     "overrides": [
       {
         "files": [
-          "**/*.stories.*"
+          "**/**/*.stories.*"
         ],
         "rules": {
           "import/no-anonymous-default-export": "off"
@@ -68,6 +73,7 @@
     "@storybook/node-logger": "^6.4.14",
     "@storybook/preset-create-react-app": "^4.0.0",
     "@storybook/react": "^6.4.14",
+    "@types/styled-components": "^5.1.21",
     "craco-alias": "^3.0.1",
     "webpack": "^5.67.0"
   }
