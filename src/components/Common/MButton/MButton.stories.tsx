@@ -7,7 +7,7 @@ export default {
   title: "Common/MButton",
   component: MButton,
   argTypes: {
-    backGroundColor: {
+    backgroundColor: {
       control: "color"
     }
   }
@@ -18,6 +18,6 @@ const Template: ComponentStory<typeof MButton> = args => <MButton {...args} />;
 export const Default = Template.bind({});
 
 Default.args = {
-  backGroundColor: "#black",
+  backgroundColor: "#black",
   title: "Button"
 };

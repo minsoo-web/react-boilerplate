@@ -1,7 +1,11 @@
 import MButtonType from "./MButton.type";
 
 function MButton(props: MButtonType) {
-  return <a href="#">{props.title}</a>;
+  return (
+    <a data-testid="m-button" href="#">
+      {props.title}
+    </a>
+  );
 }
 
 export default MButton;
