@@ -1,6 +1,6 @@
 # React Boilerplate
 
-![banner](./src/assets/images/banner.png)
+![banner](https://user-images.githubusercontent.com/57122180/151328244-a75b7be4-467b-4261-9f4d-d6d15ffaa655.png)
 
 ## 🤔 What is it ?
 
