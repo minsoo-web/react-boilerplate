@@ -2,7 +2,7 @@
 
 ## 🤔 What is it ?
 
-This Boilerplate is includes many config setup for useful developing React web project.
+This Boilerplate is includes many config setup for useful developing React web project.  
 Included package and setup is like below.
 
 - typescript
@@ -31,6 +31,13 @@ Included package and setup is like below.
 ├── components
 │   ├── Auth            # example folders
 │   └── Common
+│       └── MButton
+│            ├── MButton.stories.tsx    # storybook
+│            ├── MButton.style.ts       # styled-components
+│            ├── MButton.test.tsx       # test file
+│            ├── MButton.tsx            # tsx file
+│            ├── MButton.type.ts        # (if needed) type defefine
+│            └── index.ts
 ├── constants
 │   ├── Colors.ts
 │   └── Fonts.ts
@@ -65,40 +72,114 @@ Included package and setup is like below.
     └── Size.ts
 ```
 
+## 🤷‍♂️ What` the difference ?
+
+Many Project folder structure is not my style.  
+So I made this structure and difference is below.
+
+1. One File, One Role
+
+   I don`t like to combine styled-component with tsx file.
+   Since it is too long to read, So I devided styled-component with tsx file. 🔫 Gang
+
+2. Using ducks structure for redux-toolkit
+
+   Same reason here, I devided thunk file and slice file.
+   And combined this files for one module
+
+3. Clean Import, Easy Find File
+
+   Many example and existing react project use nameing `index.tsx` like `SomeComponents/index.tsx`.  
+   It is reason why import easy, but find file for name was complicated for me.
+
+   So I made `index.ts` file for one component folder, and named tsx file using component name.
+
+e.g
+
+_as is_
+
+```txt
+MButton
+└── index.tsx
+```
+
+_to be_
+
+```txt
+MButton
+├── MButton.style.ts
+├── MButton.tsx
+└── index.ts
+```
+
+### Useful tips for devided styled-components
+
+Devided styled-components file cause writing so many import line
+
+e.g
+
+```ts
+import {
+  Container,
+  SomeWrapper,
+  SomeTitle,
+  SomeImageWrapper
+  // ... blah blah
+} from "./SomeComponents.style.ts";
+```
+
+I recommend to use `*` with `as`
+
+to be
+
+```ts
+import * as Styled from "./SomeComponents.style.ts";
+
+const SomeComponents = () => {
+  return (
+    <Styled.Container>
+      <Styled.Wrapper>
+        <Styled.Title>hi</Styled.Title>
+      </Styled.Wrapper>
+    </Styled.Container>
+  );
+};
+```
+
 ## 👨‍💻 How to use
 
 1. clone this project
 
-```bash
-git clone https://github.com/minsoo-web/react-boilerplate.git
-```
+   ```bash
+   git clone https://github.com/minsoo-web/react-boilerplate.git
+   ```
 
 2. install package
 
-> before you start this package install, if you use npm rather than use yarn
-> I recommend you should remove yarn.lock file
+   > before you start this package install, if you use npm rather than use yarn  
+   > I recommend you should remove yarn.lock file
 
-```bash
-# go into clone folder before installing the package
-# e.g cd react-boilerplate
+   ```bash
+   # go into clone folder before installing the package
+   # e.g cd react-boilerplate
 
-# using yarn
-yarn install
+   # using yarn
+   yarn install
 
-or
+   or
 
-# using npm
-npm install
-```
+   # using npm
+   npm install
+   ```
 
 3. Let`s get it started
 
-```bash
-# using yarn
-yarn start
+   ```bash
+   # using yarn
+   yarn start
 
-or
+   or
 
-# using npm
-npm run start
-```
+   # using npm
+   npm run start
+   ```
