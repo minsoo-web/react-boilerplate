@@ -1,70 +1,104 @@
-# Getting Started with Create React App
+# React Boilerplate
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🤔 What is it ?
 
-## Available Scripts
+This Boilerplate is includes many config setup for useful developing React web project.
+Included package and setup is like below.
 
-In the project directory, you can run:
+- typescript
+- react-router (v6)
+- styled-components
+- storybook
+- testing-library/react
+- axios / http-proxy-middleware (proxy config)
+- redux (reduxjs/toolkit)
+- craco (path alias)
 
-### `npm start`
+🙇‍♂️ _I hope you like this folder structure and useful this boilerplate for saving time project init setup_
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🗂 Folder Structure
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```txt
+./src
+├── @types
+│   └── index.d.ts
+├── App.tsx
+├── assets
+│   ├── fonts
+│   ├── images
+│   ├── styles
+│   └── svgs
+├── components
+│   ├── Auth            # example folders
+│   └── Common
+├── constants
+│   ├── Colors.ts
+│   └── Fonts.ts
+├── hooks
+│   ├── index.ts
+│   └── useSomeHook.tsx # example file
+├── index.tsx
+├── reportWebVitals.ts
+├── router
+│   ├── RootRouter.tsx
+│   └── index.ts
+├── screens
+│   ├── Auth
+│   ├── Home
+│   └── index.ts
+├── setupProxy.js
+├── setupTests.ts
+├── store
+│   ├── ducks
+│   │   └── auth
+│   │       ├── authSlice.ts
+│   │       ├── authThunk.ts
+│   │       └── index.ts
+│   ├── hooks.ts
+│   ├── index.ts
+│   └── rootReducer.ts
+├── stories
+│   ├── Introduction.stories.mdx
+│   └── assets
+└── utils
+    ├── AddComma.ts     # example file
+    └── Size.ts
+```
 
-### `npm test`
+## 👨‍💻 How to use
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. clone this project
 
-### `npm run build`
+```bash
+git clone https://github.com/minsoo-web/react-boilerplate.git
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. install package
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+> before you start this package install, if you use npm rather than use yarn
+> I recommend you should remove yarn.lock file
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+# go into clone folder before installing the package
+# e.g cd react-boilerplate
 
-### `npm run eject`
+# using yarn
+yarn install
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+or
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# using npm
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. Let`s get it started
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+# using yarn
+yarn start
 
-## Learn More
+or
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# using npm
+npm run start
+```
